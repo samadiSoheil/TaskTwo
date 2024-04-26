@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+    <link href="./styles/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-slate-100">
+    <svg class="hidden">
+      <symbol
+        id="search-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </symbol>
+      <symbol
+        id="chevron-down"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="3"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+    </svg>
+
+    <!-- container -->
+    <div
+      class="flex justify-start items-center flex-col pt-20 min-h-screen container font-Vazirmatn-Regular"
+    >
+      <!-- header container -->
+      <div class="flex justify-between items-center flex-col sm:flex-row w-full mb-10">
+        <h1 class="font-Vazirmatn-Black text-2xl text-slate-500">لیست تراکنش ها</h1>
+
+        <!-- search -->
+        <div class="form mt-5 sm:mt-0" id="search-input">
+          <form id="search-foem">
+            <div class="relative flex items-center w-[300px]">
+              <input
+                class="w-full px-3 py-2 border border-slate-300 rounded-xl shadow-sm placeholder:text-sm placeholder:text-slate-400 focus:outline-none focus:border-slate-400"
+                type="text"
+                placeholder="جست و جوی تراکنش..."
+              />
+              <span class="absolute text-slate-300 left-2">
+                <svg class="size-6">
+                  <use href="#search-icon"></use>
+                </svg>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- list container -->
+      <div class="list hidden" id="list">
+        <h4 class="font-Vazirmatn-Bold text-lg text-slate-500">لیست تراکنش ها</h4>
+
+        <!-- user list -->
+        <div class="w-full overflow-x-auto">
+          <div class="w-[600px] sm:w-full user-list-container">
+            <table class="user-list">
+              <!-- header table -->
+              <tr class="user-list__header">
+                <th>ردیف</th>
+                <th>نوع تراکنش</th>
+                <th class="flex justify-center items-center">
+                  <div class="flex cursor-pointer" id="price-btn">
+                    مبلغ
+                    <span class="mr-2">
+                      <svg class="svg-chevron opacity-0" id="price-chevron">
+                        <use href="#chevron-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </th>
+                <th>شماره پیگیری</th>
+                <th class="flex justify-center">
+                  <div class="flex cursor-pointer" id="time-btn">
+                    تاریخ تراکنش
+                    <span class="mr-2">
+                      <svg class="svg-chevron" id="time-chevron">
+                        <use href="#chevron-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </th>
+              </tr>
+              <tbody class="divide-y" id="table-body"></tbody>
+            </table>
+
+            <!-- error text -->
+            <p
+              class="text-center text-red-500 font-Vazirmatn-Bold py-5 hidden"
+              id="error-text"
+            >
+              موردی یافت نشد...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- show list btn -->
+      <div class="w-full flex justify-center items-center h-[500px]">
+        <button class="btn" id="show-list-btn">بارگذاری تراکنش ها</button>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

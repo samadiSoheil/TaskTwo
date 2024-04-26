@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Vazirmatn-Regular";
+    src: url("../../assets/fonts/Vazirmatn-Regular.woff2");
+  }
+  @font-face {
+    font-family: "Vazirmatn-Bold";
+    src: url("../../assets/fonts/Vazirmatn-Bold.woff2");
+  }
+  @font-face {
+    font-family: "Vazirmatn-Black";
+    src: url("../../assets/fonts/Vazirmatn-Black.woff2");
+  }
+  @font-face {
+    font-family: "Vazirmatn-Light";
+    src: url("../../assets/fonts/Vazirmatn-Light.woff2");
+  }
+}
+
+@layer utilities {
+  .svg-chevron {
+    @apply size-4 transition-all duration-200;
+  }
+
+  .form {
+    @apply hidden;
+  }
+  .list {
+    @apply w-full p-10 bg-white border border-slate-300 rounded-lg shadow-md;
+  }
+  .user-list-container {
+    @apply border-slate-200 border rounded-lg overflow-hidden mt-5;
+  }
+  .user-list {
+    @apply w-full text-center;
+  }
+  .user-list__header {
+    @apply bg-slate-200 text-slate-500 font-Vazirmatn-Bold text-sm;
+  }
+  td,
+  th {
+    padding: 1rem 0rem;
+  }
+  tr:nth-child(even) {
+    @apply bg-slate-50;
+  }
+  .btn {
+    @apply py-7 px-14 font-Vazirmatn-Regular text-xl bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-200;
+  }
+  .hidden-btn {
+    @apply hidden opacity-0 invisible;
+  }
+}
