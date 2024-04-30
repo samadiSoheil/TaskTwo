@@ -86,9 +86,9 @@ function createTableBody(allData) {
 }
 
 // handler function sorting Price asc or des
-let isDescSortPrice = false;
+let isDescSortPrice = true;
+
 async function sortPriceHandler() {
-  PriceBtnIcon.classList.remove("opacity-0");
   isDescSortPrice = !isDescSortPrice;
   let sortedDatas = await fetchData(
     `http://localhost:3000/transactions?_sort=price&_order=${
